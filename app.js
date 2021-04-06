@@ -39,10 +39,10 @@ let totalCaptures = 0;
 
 pokeBall.addEventListener('click', () => {
     const selectedPokemon = document.querySelector('input:checked');
-console.log(selectedPokemon);
+    console.log(selectedPokemon);
     const pokeObject = findByPokemonName(selectedPokemon.value);
     capturePokemon(pokeObject);
-console.log(pokeObject);
+    console.log(pokeObject);
     createPokemonSelect();
 
     
