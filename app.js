@@ -1,5 +1,8 @@
 import { findByPokemonName } from './utils.js';
 import { presentThreePokemon } from './data-utils.js';
+import { capturePokemon, getPokedex } from './local-storage-utils.js';
+
+const pokeBall = document.querySelector('button');
 
 function createPokemonSelect() {
     const pokeRadio1 = document.querySelector('#radio-1');
@@ -32,3 +35,22 @@ function createPokemonSelect() {
 }
 
 createPokemonSelect();
+let totalCaptures = 0;
+
+pokeBall.addEventListener('click', () => {
+    const selectedPokemon = document.querySelector('input:checked');
+console.log(selectedPokemon);
+    const pokeObject = findByPokemonName(selectedPokemon.value);
+    capturePokemon(pokeObject);
+console.log(pokeObject);
+    createPokemonSelect();
+
+    
+
+    totalCaptures++;
+
+    if (totalCaptures === 3) {
+        window.location = './results/index.html';
+        alert('Thanks for helping professor Oak! Go catch another batch!');
+    }
+});

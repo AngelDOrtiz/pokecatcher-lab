@@ -39,3 +39,27 @@ export function encounterPokemon(pokemon) {
 
     return pokedex;
 }
+
+export function capturePokemon(pokemon) {
+    const pokedex = getPokedex();
+
+
+    const matchingPokedexPoke = findById(pokedex, pokemon.pokemon);
+    
+    matchingPokedexPoke.captured++;
+
+    setPokedex(pokedex);
+
+    return pokedex;
+}
+
+
+/*export function totalCaptures() {
+    const pokedex = getPokedex();
+
+    const totalCaptures = pokedex.captured;
+
+    setPokedex(pokedex);
+
+    return totalCaptures;
+}*/
