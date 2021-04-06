@@ -22,6 +22,10 @@ body {
     background-color: var(--color2);
 }
 
+img {
+    width: 300px;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -51,6 +55,10 @@ header {
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
+}
+
+label {
+    display: inline;
 }
 
 footer {

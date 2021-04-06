@@ -1,4 +1,4 @@
-import { findById } from './utils';
+import { findById } from './utils.js';
 
 const POKEDEX = 'POKEDEX';
 
@@ -37,5 +37,5 @@ export function encounterPokemon(pokemon) {
 
     setPokedex(pokedex);
 
-    return pokedex:
+    return pokedex;
 }

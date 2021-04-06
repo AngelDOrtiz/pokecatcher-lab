@@ -1,1 +1,0 @@
-import { findByPokemonName } from './utils';
