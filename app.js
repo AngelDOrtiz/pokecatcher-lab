@@ -30,8 +30,33 @@ function createPokemonSelect() {
     const img3 = document.querySelector('#poke-img3');
 
     img3.src = threePokemon[2].url_image;
-    pokeLabel3.append(img1);
+    pokeLabel3.append(img3);
     pokeRadio3.value = threePokemon[2].pokemon;
+
+    
+    pokeLabel1.addEventListener('mouseenter', () => {
+        pokeLabel1.classList.add('hover');
+    });
+
+    pokeLabel1.addEventListener('mouseleave', () => {
+        pokeLabel1.classList.remove('hover');
+    });
+
+    pokeLabel2.addEventListener('mouseenter', () => {
+        pokeLabel2.classList.add('hover');
+    });
+
+    pokeLabel2.addEventListener('mouseleave', () => {
+        pokeLabel2.classList.remove('hover');
+    });
+
+    pokeLabel3.addEventListener('mouseenter', () => {
+        pokeLabel3.classList.add('hover');
+    });
+
+    pokeLabel3.addEventListener('mouseleave', () => {
+        pokeLabel3.classList.remove('hover');
+    });
 }
 
 createPokemonSelect();
@@ -39,17 +64,17 @@ let totalCaptures = 0;
 
 pokeBall.addEventListener('click', () => {
     const selectedPokemon = document.querySelector('input:checked');
-    console.log(selectedPokemon);
+
     const pokeObject = findByPokemonName(selectedPokemon.value);
     capturePokemon(pokeObject);
-    console.log(pokeObject);
+
     createPokemonSelect();
 
     
 
     totalCaptures++;
 
-    if (totalCaptures === 3) {
+    if (totalCaptures === 10) {
         window.location = './results/index.html';
         alert('Thanks for helping professor Oak! Go catch another batch!');
     }
