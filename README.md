@@ -1,6 +1,6 @@
 # alchemy-bootstrap-ts-template 
 
-(grab the right template next time)
+
 
 
 Display 3 pokemon
